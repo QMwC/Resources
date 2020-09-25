@@ -3249,10 +3249,20 @@ var PHOTON = {
 
       // Pressing YES restarts the exercise
       btYes.onPress(function() {
+	alert('This feature has been disabled.');
         btYes.offPress();
         // Remove the overlay
         overlay.hide(true);
-        // Remove all objects from the 3D scene
+	//BELOW HAS BEEN ADDED
+	setTimeout(function() {
+          PHOTON.removeChild(btYes);
+          PHOTON.removeChild(btNo);
+          PHOTON.removeChild(refreshWindow);
+          PHOTON.removeChild(overlay);
+        }, 600);
+        self.onPress(renderRefreshWindow);
+	//ABOVE HAS BEEN ADDED
+        /*// Remove all objects from the 3D scene
         for(key in PHOTON.threeChildren) PHOTON.threeChildren[key].remove();
         // Hide all of the app's children
         for(key in PHOTON.children)
@@ -3276,7 +3286,7 @@ var PHOTON = {
         setTimeout(function() {
           PHOTON.renderIntro();
         }, 600)
-      })
+      })*/
     }
 
     // Adding event listener to this button

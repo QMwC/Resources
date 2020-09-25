@@ -88,7 +88,7 @@ var PHOTON = {
 
   // Remote assets are stored in this object
   _REMOTE_ASSETS: {
-    'METAL TEXTURE': 'metal.jpg'
+    'METAL TEXTURE': 'https://raw.githubusercontent.com/QMwC/Book-Resources/master/pton/metal.jpg'
   },
 
   // Introductory message to users (set to a string in experiments)

@@ -3285,8 +3285,8 @@ var PHOTON = {
         }, 500);
         setTimeout(function() {
           PHOTON.renderIntro();
-        }, 600)
-      })*/
+        }, 600)*/
+      })
     }
 
     // Adding event listener to this button

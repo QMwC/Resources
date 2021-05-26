@@ -2132,6 +2132,12 @@
         parent.appendChild(e);
         return e;
       }
+
+      window.onmessage = (e) => {
+        if (e.origin === "https://quantum.georgetown.domains") {
+          window.parent.postMessage(document.body.parentElement.offsetHeight, "https://quantum.georgetown.domains");
+        }
+      }
     </script>
   </body>
 </html>
